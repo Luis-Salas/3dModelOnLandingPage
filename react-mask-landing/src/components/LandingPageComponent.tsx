@@ -179,7 +179,7 @@ const FurryBuilderLandingPage: React.FC = () => {
                 
                 <div className="text-center">
                   <div className="w-full h-full mx-auto mb-4 relative">
-                    <MaskViewer selectedColor={selectedColor} />
+                    <MaskViewer color={selectedColor} />
                   </div>
                   <p className="font-bold" style={{
                     color: '#6b21a8',
@@ -188,6 +188,23 @@ const FurryBuilderLandingPage: React.FC = () => {
                     Move your mouse to interact with the mask!
                   </p>
                 </div>
+              </div>
+
+              {/* Color Options */}
+              <div className="mt-6 flex justify-center gap-4">
+                {colorOptions.map((colorOpt) => (
+                  <button
+                    key={colorOpt.value}
+                    onClick={() => setSelectedColor(colorOpt.value)}
+                    className="w-10 h-10 rounded-full border-4 transition-transform hover:scale-110"
+                    style={{
+                      backgroundColor: colorOpt.value,
+                      borderColor: selectedColor === colorOpt.value ? '#000' : '#666',
+                      transform: selectedColor === colorOpt.value ? 'scale(1.1)' : 'scale(1)'
+                    }}
+                    aria-label={`Select ${colorOpt.name} color`}
+                  />
+                ))}
               </div>
             </div>
             
