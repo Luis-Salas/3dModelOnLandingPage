@@ -1,0 +1,25 @@
+If your model is not loading, here are some alternative approaches to try:
+
+1. Install Blender and open your GLB file to check if it's valid
+2. Try exporting your model from Blender to GLB format
+3. Use a simple model for testing from these sites:
+   - https://sketchfab.com/ (many free models)
+   - https://market.pmnd.rs/ (simple models for Three.js)
+   
+4. For testing if your model path is working, try a different approach by directly loading a model from the web:
+
+You could modify main.js to try loading a sample model from the web like this:
+
+```javascript
+// Try loading a sample model from the web
+loader.load(
+    'https://threejs.org/examples/models/gltf/Duck/glTF/Duck.gltf',
+    function(gltf) {
+        console.log('Sample duck model loaded!');
+        mask = gltf.scene;
+        scene.add(mask);
+    }
+);
+```
+
+Remember that once you get a model loading, you'll need to adjust the scale and position to fit your scene.

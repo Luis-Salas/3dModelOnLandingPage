@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting to 3D Model Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+    .container {
+      text-align: center;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      max-width: 600px;
+    }
+    h1 {
+      color: #6366f1;
+    }
+    p {
+      margin: 1rem 0;
+      line-height: 1.5;
+    }
+    .button {
+      display: inline-block;
+      background-color: #6366f1;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1rem;
+      transition: background-color 0.2s;
+    }
+    .button:hover {
+      background-color: #4f46e5;
+    }
+    .note {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      border-radius: 4px;
+    }
+  </style>
+  <script>
+    // Redirect after a short delay
+    setTimeout(function() {
+      window.location.href = '/react-mask-landing/public/test-model.html';
+    }, 3000);
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Redirecting to 3D Model Test</h1>
+    <p>You will be redirected to the 3D model test page in 3 seconds...</p>
+    <a href="/react-mask-landing/public/test-model.html" class="button">Go Now</a>
+    
+    <div class="note">
+      <p><strong>Note:</strong> If you're seeing this page, it means the server is running correctly. If the redirect doesn't work, make sure you're accessing this page through the local server at <code>http://localhost:3000/test-redirect.html</code>.</p>
+    </div>
+  </div>
+</body>
+</html>

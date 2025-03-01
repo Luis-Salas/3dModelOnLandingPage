@@ -1,0 +1,163 @@
+/* Harajuku-inspired pastel color palette */
+:root {
+    --pink-pastel: #ffb6c1;
+    --blue-pastel: #add8e6;
+    --yellow-pastel: #fffacd;
+    --mint-pastel: #c7f6d3;
+    --purple-pastel: #e6e6fa;
+    --primary-bg: #ffffff;
+    --text-color: #333333;
+    --border-radius: 15px;
+    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, var(--purple-pastel) 0%, var(--pink-pastel) 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    background-color: var(--primary-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--mint-pastel);
+    border-radius: var(--border-radius);
+}
+
+.header h1 {
+    color: var(--text-color);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.header p {
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.model-container {
+    height: 500px;
+    width: 100%;
+    background-color: var(--blue-pastel);
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+#model-viewer {
+    width: 100%;
+    height: 100%;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.color-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.color-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.color-btn.pink {
+    background-color: var(--pink-pastel);
+}
+
+.color-btn.blue {
+    background-color: var(--blue-pastel);
+}
+
+.color-btn.yellow {
+    background-color: var(--yellow-pastel);
+}
+
+.color-btn.mint {
+    background-color: var(--mint-pastel);
+}
+
+.footer {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: var(--yellow-pastel);
+    border-radius: var(--border-radius);
+}
+
+.footer p {
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+/* Decorative elements for Harajuku style */
+.container::before, 
+.container::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.container::before {
+    background-color: var(--pink-pastel);
+    top: -50px;
+    left: -50px;
+}
+
+.container::after {
+    background-color: var(--yellow-pastel);
+    bottom: -50px;
+    right: -50px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .model-container {
+        height: 350px;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .controls {
+        flex-wrap: wrap;
+    }
+}
